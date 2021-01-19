@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 
 document.getElementById('cont_value').onclick = function(){
-
+    //window.location.reload();
     var name = document.getElementById('fname1').value;
     var email= document.getElementById('email1').value;
     var mobile = document.getElementById('mobile1').value;
@@ -28,7 +28,18 @@ document.getElementById('cont_value').onclick = function(){
     document.getElementById('subject1').value = "";
     document.getElementById('mobile1').value = "";
     alert("ThankYou " + name + " We get back to you soon ");
-
+    
+    addveera(name);
+}
+function addveera(name){
+    var x1 = name;
+    console.log("Hello" + x1);
+    $(document).ready(function () { 
+        setTimeout(function () { 
+          //alert('Reloading Page'); 
+          location.reload(true); 
+        }, 1000); 
+      }); 
 }
 
 
