@@ -163,9 +163,9 @@
                         </div>
                         <!-- content -->
                         <div style="text-align: center;">
-                            <h2 style="color: black; margin-left: 2%;">MOHAMED AJEESH N</h2>
+                            <h2 style="color: black; margin-left: 2%;">MOHAMED AJEES N</h2>
                             <p style="color: grey; margin-left: 2%;">Co-Founder & CEO</p>
-                            <p style="color: black; margin-left: 2%;">demo@gmail.com</p>
+                            <p style="color: black; margin-left: 2%;">mohamedajees47@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                 <label for="subject">Message</label>
                 <textarea id="subject1" name="subject" placeholder="Write something.." style="height:150px"></textarea>
 
-                <input type="button" value="Submit" id="cont_value">
+                <input type="button" value="Submit" id="cont_value" style="background-color: #286cf9;border-radius: 50%;color: white;width: 10%;height: 29px;" disabled>
             </form>
         </div>
 
@@ -476,6 +476,27 @@
             }
         }
     </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    (function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#cont_value').attr('disabled', 'disabled');
+        } else {
+            $('#cont_value').removeAttr('disabled');
+        }
+    });
+})()
+</script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
