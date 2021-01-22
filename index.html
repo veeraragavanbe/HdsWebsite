@@ -129,9 +129,9 @@
 
                         <!-- content -->
                         <div style="text-align: center;">
-                            <h4 style="color: black; margin-left: 2%;">MOHAMED KATHER SHERIF P</h4>
-                            <p style="color: grey; margin-left: 2%;">Founder</p>
-                            <p style="color: black; margin-left: 2%;">farnas7860@gmail.com</p>
+                            <h4 style="color: black; margin-left: 2%;">MEERAN SHAHIB A </h4>
+                            <p style="color: grey; margin-left: 2%;">Co-Founder</p>
+                            <p style="color: black; margin-left: 2%;">sahibmeeran762@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -146,9 +146,10 @@
                         </div>
                         <!-- content -->
                         <div style="text-align: center;">
-                            <h4 style="color: black; margin-left: 2%;">MEERAN SHAHIB A </h4>
-                            <p style="color: grey; margin-left: 2%;">Co-Founder</p>
-                            <p style="color: black; margin-left: 2%;">sahibmeeran762@gmail.com</p>
+                            <h4 style="color: black; margin-left: 2%;">MOHAMED KATHER SHERIF P</h4>
+                            <p style="color: grey; margin-left: 2%;">Founder & CEO</p>
+                            <p style="color: black; margin-left: 2%;">farnas7860@gmail.com</p>
+                        
                         </div>
                     </div>
                 </div>
@@ -164,7 +165,7 @@
                         <!-- content -->
                         <div style="text-align: center;">
                             <h4 style="color: black; margin-left: 2%;">MOHAMED AJEES N</h4>
-                            <p style="color: grey; margin-left: 2%;">Co-Founder & CEO</p>
+                            <p style="color: grey; margin-left: 2%;">Co-Founder</p>
                             <p style="color: black; margin-left: 2%;">mohamedajees47@gmail.com</p>
                         </div>
                     </div>
@@ -266,8 +267,9 @@
         <br>
         <div style="text-align: center;">
             <h2 style="font-size: 40px;">Start your Career with HDS</h2>
-            <p>Entice job seekers to read on with a short</p>
-            <p>and catchy introduction to your Company</p><br>
+            <p>Opportunity for limitless careers growth</p>
+            <p>Reach us for your Career</p>
+            <br>
         </div>
         <div style="width: 100%;height: 30px;text-align: center;">
             <!-- <a href="#"><input type="button" value="View job Opennings" style="width: 200px;height: 40px;background-color: rgb(0, 0, 0);font-size: 130%;color: blanchedalmond;cursor: pointer;" disabled></a> -->
@@ -332,7 +334,7 @@
                         <span><i style="font-size: 130%;padding-top: 5px;" class="fa fa-envelope" aria-hidden="true"></i></span>
                         </div>
                         <div style="float: right;width: 90%;text-align: left;padding-left: 5%;padding-right: 10%;"> 
-                        <p>hyperdeltasoftwaresoutions @gmail.com</p>
+                        <p>hyperdeltasoftwaresolutions @gmail.com</p>
                         </div>
                     </div>
                     </div>
@@ -387,22 +389,98 @@
             </div>
         </form>
     </div>
+    <script>
+        document.getElementById('mobile1').onclick = function()
+        {
+            var s1 = document.getElementById('email1').value;
+            if(s1.indexOf('@') <= 0){
+                alert("Enter Valid Email");
+                document.getElementById('email1').focus();
+            }
+        }
+
+
+        document.getElementById('subject1').onclick = function()
+        {
+            var mobile_num = document.getElementById('mobile1').value;
+            var m2 = /^\d{10}$/;
+            if(mobile_num.match(m2))
+            {
+                console('matched');
+            }
+            else
+            {
+             alert("Not valid mobile number");
+             document.getElementById('mobile1').focus();
+            }
+        }
+    </script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+
+
+
+    <!-- script for sign in popup -->
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    document.getElementById('mobile1').onclick = function(){
-       var emailvalid = document.getElementById('email1').value;
-       if (emailvalid.indexOf('@') <= 0)
-       {
-        alert('Enter valid email');
-        document.getElementById('email1').focus();
-       }
-    }
+    (function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#cont_value').attr('disabled', 'disabled');
+        } else {
+            $('#cont_value').removeAttr('disabled');
+        }
+    });
+})()
 </script>
 
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
-    <script src="asset/bootstrap-4.3.1-dist/js/mystyle.js"></script>
+    <!-- <script src="asset/bootstrap-4.3.1-dist/js/mystyle.js"></script> -->
     <script src="asset/bootstrap-4.3.1-dist/js/contact.js"></script>
 </body>
 </html>
