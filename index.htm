@@ -281,12 +281,12 @@
     <div class="total-contact">
         <div class="lside" id="section5">
             <h3 style="margin-left: 33%;color: #000000;font-weight: bold;font-size: 25px;font-family: cursive;">Contact</h3>
-            <form action="#" style="margin-left: 5%;">
+            <form id="cont_detail" action="#" style="margin-left: 5%;">
                 <label for="fname">Name</label>
                 <input type="text" id="fname1" name="firstname" placeholder="Your name..">
 
                 <label for="lname">Email</label>
-                <input type="text" id="email1" name="Email" placeholder="Your Email..">
+                <input style="width: 100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;background: #f1f1f1;" type="email" id="email1" name="Email" placeholder="Your Email..">
                
                 <label for="lname">Mobile</label>
                 <input type="text" id="mobile1" name="Email" placeholder="Your Mobile..">
@@ -369,7 +369,7 @@
                 <p>Please fill in this form to create an account.</p>
                 <hr>
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="email" placeholder="Enter Email" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
@@ -388,119 +388,12 @@
         </form>
     </div>
 
-        <!-- signup box -->
-        <!-- <div id="id02" class="modal">
-            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <form class="modal-content" action="/action_page.php">
-                <div class="container" style="margin-top: 0%;">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                    <label for="Name"><b>Name</b></label>
-                    <input type="text" placeholder="Name" name="Name" required>
-                    
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-    
-                    <label for="Mobile Number"><b>Mobile Number</b></label>
-                    <input type="tel" placeholder="Mobile Number" name="Number" required>
-    
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-    
-                    <label for="R-psw"><b>Confirm Password</b></label>
-                    <input type="password" placeholder="Confirm Password" name="C-psw" required>
-    
-                    <label for="Qualification"><b>Qualification</b></label>
-                    <select id="Degree" Name="Degree">
-                            <option value="Select">--Select--</option>
-                            <option value="B.E">B.E</option>
-                            <option value="B.Sc">B.Sc</option>
-                            <option value="B.Com">B.Com</option>
-                            <option value="Diplamo">Diplamo</option>
-                            <option value="B.A">B.A</option>
-                            <option value="Others">Others</option>
-                    </select>
-    
-                    <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-    
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-    
-                    <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-                        <button type="submit" class="signupbtn">Sign Up</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-     -->
 
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
-
-
-
-    <!-- script for sign in popup -->
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    (function() {
-    $('form > input').keyup(function() {
-
-        var empty = false;
-        $('form > input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
-
-        if (empty) {
-            $('#cont_value').attr('disabled', 'disabled');
-        } else {
-            $('#cont_value').removeAttr('disabled');
-        }
-    });
-})()
-</script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/mystyle.js"></script>
     <script src="bootstrap-4.3.1-dist/js/contact.js"></script>
 </body>
 </html>
