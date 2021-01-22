@@ -51,4 +51,4 @@ var slideIndex = 0;
                     $('#cont_value').removeAttr('disabled');
                 }
             });
-        })()
+        })
